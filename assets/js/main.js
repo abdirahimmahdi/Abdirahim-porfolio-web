@@ -56,7 +56,7 @@ async function loadPersonalData() {
   }
 
   // Update contact section location
-  const locationElement = document.querySelector('.contact .muted:last-child');
+  const locationElement = document.getElementById('contact-location');
   if (locationElement) {
     locationElement.textContent = data.location;
   }
@@ -87,7 +87,7 @@ async function loadSkillsData() {
   const data = await loadJSON('skills.json');
   if (!data || !data.skills) return;
 
-  const skillsContainer = document.querySelector('.skills');
+  const skillsContainer = document.getElementById('skills-container');
   if (!skillsContainer) return;
 
   skillsContainer.innerHTML = '';
@@ -104,6 +104,15 @@ async function loadSkillsData() {
     `;
     skillsContainer.appendChild(skillElement);
   });
+
+  // Animate progress bars after they're loaded (with slight delay for visual effect)
+  setTimeout(() => {
+    skillsContainer.querySelectorAll('.bar>span').forEach(b => {
+      const v = b.getAttribute('data-val') || 0;
+      b.style.transition = 'width 0.8s cubic-bezier(.22,1,.36,1)';
+      requestAnimationFrame(() => { b.style.width = v + '%'; });
+    });
+  }, 100);
 }
 
 async function loadExperienceData() {
@@ -155,11 +164,45 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadSkillsData();
     await loadExperienceData();
     await loadEducationData();
+
+    // Re-initialize animations after dynamic content is loaded
+    initializeAnimations();
+
     console.log('Data loaded successfully');
   } catch (error) {
     console.error('Error loading data:', error);
   }
 });
+
+// Initialize animations (can be called multiple times)
+function initializeAnimations() {
+  // Show hero section immediately (it's at the top)
+  const heroSection = document.querySelector('.hero');
+  if (heroSection) {
+    heroSection.classList.add('show');
+  }
+
+  // Reset intersection observer for other reveal animations
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('show');
+        io.unobserve(e.target);
+
+        // Animate progress bars immediately when section becomes visible
+        e.target.querySelectorAll('.bar>span').forEach(b=>{
+          const v = b.getAttribute('data-val')||0;
+          // Animate faster with shorter duration
+          b.style.transition = 'width 0.8s cubic-bezier(.22,1,.36,1)';
+          requestAnimationFrame(()=>{ b.style.width = v+'%'; });
+        });
+      }
+    });
+  }, {threshold: 0.1}); // Lower threshold for faster triggering
+
+  // Observe all reveal elements except hero (which is already shown)
+  document.querySelectorAll('.reveal:not(.hero)').forEach(el=>io.observe(el));
+}
 
 // typed effect (words will be set dynamically from personal.json)
 let words = window.typedWords || [
