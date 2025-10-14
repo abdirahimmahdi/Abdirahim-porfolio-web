@@ -1,0 +1,37 @@
+{
+  "experience": [
+    {
+      "title": "Business Development & Marketing Intern",
+      "company": "Bluesense AI Inc.",
+      "location": "Istanbul, Türkiye",
+      "period": "Jun 2025 – Aug 2025",
+      "responsibilities": [
+        "Supported B2B outreach, identifying partners and building strategic connections.",
+        "Helped prepare the company's data room for investor relations and due diligence.",
+        "Contributed to product development, marketing strategy, and business planning.",
+        "Gained practical experience in business development and investor readiness."
+      ]
+    },
+    {
+      "title": "Logistics & Client Services Intern",
+      "company": "Somali Transport",
+      "location": "Istanbul, Türkiye",
+      "period": "Aug 2025 – Sep 2025",
+      "responsibilities": [
+        "Managed shipping documents (Bills of Lading, Commercial Invoices) and tracking software.",
+        "Troubleshot shipment delays and supported multimodal route planning.",
+        "Strengthened problem-solving and client service capabilities."
+      ]
+    },
+    {
+      "title": "Excel Data Analysis Project",
+      "company": "DataCamp",
+      "location": "",
+      "period": "2024",
+      "responsibilities": [
+        "Analyzed customer churn data using preparation, visualization, and analysis techniques in Excel.",
+        "Produced insights and recommendations to improve decision-making."
+      ]
+    }
+  ]
+}

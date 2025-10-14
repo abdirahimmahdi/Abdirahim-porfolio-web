@@ -1,0 +1,49 @@
+/* CSS Variables */
+:root {
+  --bg: #0b0f18;
+  --card: #0f1524;
+  --soft: #162039;
+  --text: #e7ecf3;
+  --muted: #9fb0d1;
+  --brand: #6ee7ff;
+  --brand-2: #7c7bff;
+  --accent: #32d6a0;
+  --radius: 20px;
+  --shadow: 0 8px 30px rgba(0, 0, 0, .35);
+}
+
+/* CSS Reset */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Base Typography */
+a {
+  color: var(--brand);
+}
+
+/* Utility Classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

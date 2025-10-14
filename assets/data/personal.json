@@ -1,0 +1,25 @@
+{
+  "name": "Abdirahim Omar Mahdi",
+  "title": "Industrial Engineering Student",
+  "location": "Avcılar, Istanbul",
+  "email": "abdirahim.mahdi@example.com",
+  "phone": "+905312700429",
+  "linkedin": "https://www.linkedin.com/in/abdirahimmahdi/",
+  "github": "https://github.com/abdirahimmahdi",
+  "bio": "Motivated Industrial Engineering student with a passion for process optimization, productivity improvement, and data-driven decision-making. Hands-on with dashboarding for production efficiency and inventory management.",
+  "tagline": "Hi, I'm Abdirahim —",
+  "specializations": [
+    "process optimization",
+    "productivity improvement",
+    "data-driven decision-making"
+  ],
+  "careerGoals": [
+    "internships",
+    "entry-level roles"
+  ],
+  "careerFields": [
+    "operations",
+    "analytics",
+    "supply chain"
+  ]
+}

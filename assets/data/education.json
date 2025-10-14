@@ -1,0 +1,17 @@
+{
+  "education": [
+    {
+      "institution": "Altınbaş University",
+      "degree": "BSc Industrial Engineering",
+      "expectedGraduation": "Jun 2026",
+      "gpa": "3.45",
+      "courses": [
+        "Production Systems Mgmt",
+        "Stochastic Models",
+        "System Simulation",
+        "Supply Chain",
+        "Engineering Economics"
+      ]
+    }
+  ]
+}

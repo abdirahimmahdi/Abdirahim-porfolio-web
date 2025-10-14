@@ -1,0 +1,34 @@
+{
+  "skills": [
+    {
+      "name": "Data Analysis & Visualization",
+      "level": 90,
+      "description": "Excel (Advanced), Power BI (Basic)"
+    },
+    {
+      "name": "Operations & Optimization",
+      "level": 80,
+      "description": "Lean, Time & Motion, Inventory"
+    },
+    {
+      "name": "Math & Statistics",
+      "level": 75,
+      "description": "Probability, Stochastic Models, Simulation"
+    },
+    {
+      "name": "Programming",
+      "level": 55,
+      "description": "Intro level for scripting & analysis"
+    },
+    {
+      "name": "Supply Chain & Logistics",
+      "level": 70,
+      "description": "Inventory, Routing, Process Improvement"
+    },
+    {
+      "name": "Tools & Platforms",
+      "level": 65,
+      "description": "Excel, Power BI, Simulation Tools"
+    }
+  ]
+}
