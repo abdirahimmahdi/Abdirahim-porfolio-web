@@ -4,15 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Resume — Abdirahim Omar Mahdi</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body id="top">
   <div class="bg-anim"></div>
   <header>
     <nav class="nav">
-      <div class="logo"><div class="avatar">AM</div> Abdirahim Mahdi</div>
-      <div>
+      <a class="brand" href="index.html#top" aria-label="Back to home">
+        <span class="brand-name">ABDIRAHIM<br class="brand-break"/> MAHDI</span>
+        <span class="brand-tagline">Industrial Engineering Student</span>
+      </a>
+      <div class="nav-links" role="navigation" aria-label="Primary">
         <a href="index.html#about">About</a>
         <a href="index.html#skills">Skills</a>
         <a href="index.html#experience">Experience</a>
@@ -24,22 +27,20 @@
   </header>
 
   <main>
-    <section class="reveal">
+    <section class="reveal show">
       <h1>Resume</h1>
       <div class="card resume-embed">
-        <object data="abdirahim_omar_mahdi_cv2025.pdf" type="application/pdf" aria-label="Embedded resume">
-          <iframe src="abdirahim_omar_mahdi_cv2025.pdf" title="Resume PDF"></iframe>
-        </object>
+        <iframe class="pdf-frame" src="abdirahim_omar_mahdi_cv2025.pdf#view=FitH" title="Resume PDF"></iframe>
         <div class="resume-actions" style="padding:14px; display:flex; gap:10px; flex-wrap:wrap">
-          <a class="btn" href="abdirahim_omar_mahdi_cv2025.pdf" download>Download PDF</a>
-          <a class="btn ghost" href="abdirahim_omar_mahdi_cv2025.pdf" target="_blank" rel="noopener">Open in new tab</a>
+          <a class="btn" href="abdirahim_omar_mahdi_cv2025.pdf" target="_blank" rel="noopener">Open PDF</a>
+          <a class="btn ghost" href="abdirahim_omar_mahdi_cv2025.pdf" download>Download PDF</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    © <span id="year"></span> Abdirahim Mahdi · Built by Shams with ❤
+    © <span id="year"></span> Abdirahim Mahdi
   </footer>
 
   <script src="assets/js/main.js"></script>

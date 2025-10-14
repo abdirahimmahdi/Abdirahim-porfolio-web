@@ -4,60 +4,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Abdirahim Omar Mahdi — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body id="top">
   <div class="bg-anim"></div>
   <header>
     <nav class="nav">
-      <div class="logo"><div class="avatar">AM</div> Abdirahim Mahdi</div>
-      <div>
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-name">ABDIRAHIM<br class="brand-break"/> MAHDI</span>
+        <span class="brand-tagline">Industrial Engineering Student</span>
+      </a>
+      <div class="nav-links" role="navigation" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a href="resume.html">Resume</a>
         <a href="#contact">Contact</a>
-        
       </div>
     </nav>
   </header>
 
   <section class="hero">
     <div class="left card reveal">
-      <div class="kicker">Industrial Engineering Student</div>
       <h1>Hi, I’m Abdirahim — <span class="typed" id="typed"></span></h1>
       <p class="sub">I’m passionate about process optimization, data‑driven decisions, and building clean dashboards that improve productivity and inventory control. Seeking <b>internships</b> and <b>entry-level roles</b> in operations, analytics, or supply chain.</p>
       <div class="cta">
-        <a class="btn" href="mailto:abdirahimdayib@gmail.com">Contact Me</a>
+        <a class="btn" href="#contact">Contact Me</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/abdirahimmahdi/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-    <div class="right card reveal">
-      <div class="glass">
-        <h3 style="margin:0 0 8px">Quick Snapshot</h3>
-        <div class="metrics">
-          <div class="metric"><div class="num" data-count="2026">0000</div><div class="lbl">Grad Year</div></div>
-          <div class="metric"><div class="num" data-count="8">0</div><div class="lbl">Certs/Modules</div></div>
-        </div>
-      </div>
-      <div class="glass shine" style="margin-top:10px">
-        <div style="display:flex; gap:10px; flex-wrap:wrap">
-          <span class="pill">Excel (Advanced)</span>
-          <span class="pill">Power BI (Basic)</span>
-          <span class="pill">Lean Manufacturing</span>
-          <span class="pill">Time & Motion Studies</span>
-          <span class="pill">Inventory Mgmt</span>
-          <span class="pill">Stochastic Models</span>
-          <span class="pill">Simulation</span>
-        </div>
       </div>
     </div>
   </section>
 
 
   <section id="about" class="reveal">
+    <div class="about-kicker">Industrial Engineering Student</div>
     <h2>About</h2>
     <div class="card" style="padding:18px">
       Motivated Industrial Engineering student with a passion for <b>process optimization</b>, <b>productivity improvement</b>, and <b>data‑driven decision‑making</b>. Hands‑on with dashboarding for production efficiency and inventory management. Based in <b>Avcılar, Istanbul</b>.
@@ -65,12 +47,14 @@
   </section>
 
   <section id="skills" class="reveal">
-    <h2>Technical Skills</h2>
+    <h2>Skills</h2>
     <div class="grid skills">
       <div class="skill"><b>Data Analysis & Visualization</b><div class="bar"><span data-val="90"></span></div><div class="muted">Excel (Advanced), Power BI (Basic)</div></div>
       <div class="skill"><b>Operations & Optimization</b><div class="bar"><span data-val="80"></span></div><div class="muted">Lean, Time & Motion, Inventory</div></div>
       <div class="skill"><b>Math & Statistics</b><div class="bar"><span data-val="75"></span></div><div class="muted">Probability, Stochastic Models, Simulation</div></div>
       <div class="skill"><b>Programming</b><div class="bar"><span data-val="55"></span></div><div class="muted">Intro level for scripting & analysis</div></div>
+      <div class="skill"><b>Supply Chain & Logistics</b><div class="bar"><span data-val="70"></span></div><div class="muted">Inventory, Routing, Process Improvement</div></div>
+      <div class="skill"><b>Tools & Platforms</b><div class="bar"><span data-val="65"></span></div><div class="muted">Excel, Power BI, Simulation Tools</div></div>
     </div>
   </section>
 
@@ -130,22 +114,7 @@
     </div>
   </section>
 
-  <section class="reveal">
-    <h2>Certifications & Training</h2>
-    <div class="grid skills">
-      <div class="skill"><b>Data Analytics & Excel</b><div class="bar"><span data-val="85"></span></div><div class="muted">DataCamp, IBM, Coursera</div></div>
-      <div class="skill"><b>Operations & Supply Chain</b><div class="bar"><span data-val="70"></span></div><div class="muted">Rutgers SCM Specialization (Mar 2025)</div></div>
-      <div class="skill"><b>Lean Six Sigma & Quality</b><div class="bar"><span data-val="65"></span></div><div class="muted">U. Amsterdam, Board Infinity (Mar 2025)</div></div>
-    </div>
-  </section>
-
-  <section class="reveal">
-    <h2>Languages & Personal Skills</h2>
-    <div class="grid skills">
-      <div class="skill"><b>Languages</b><div class="bar"><span data-val="80"></span></div><div class="muted">English (Upper‑Intermediate), Turkish (Good communication)</div></div>
-      <div class="skill"><b>Personal</b><div class="bar"><span data-val="85"></span></div><div class="muted">Problem Solving, Teamwork, Time Management</div></div>
-    </div>
-  </section>
+  
 
 
   <section id="contact" class="contact reveal">
@@ -168,7 +137,7 @@
   </section>
 
   <footer>
-    © <span id="year"></span> Abdirahim Mahdi · Built by Shams with ❤
+    © <span id="year"></span> Abdirahim Mahdi
   </footer>
 
   <script src="assets/js/main.js"></script>
