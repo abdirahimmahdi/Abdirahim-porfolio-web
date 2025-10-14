@@ -136,12 +136,12 @@ async function loadEducationData() {
   const data = await loadJSON('education.json');
   if (!data || !data.education) return;
 
-  const educationContainer = document.querySelector('#education .card');
+  const educationContainer = document.getElementById('education-container');
   if (!educationContainer) return;
 
   const education = data.education[0];
   educationContainer.innerHTML = `
-    <b>${education.institution}</b> — ${education.degree} (Expected ${education.expectedGraduation}) • GPA ${education.gpa}<br/>
+    <b>${education.institution}</b> — ${education.degree} • ${education.period}<br/>
     <div class="list" style="margin-top:10px">
       ${education.courses.map(course => `<span class="pill">${course}</span>`).join('')}
     </div>
