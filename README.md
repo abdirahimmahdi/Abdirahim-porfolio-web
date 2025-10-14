@@ -1,16 +1,5 @@
-# Abdirahim Omar Mahdi - Portfolio Website
+# Portfolio Website
 
-A modern, responsive portfolio website showcasing industrial engineering skills, experience, and projects. Built with vanilla HTML, CSS, and JavaScript for optimal performance and maintainability.
-
-## 🚀 Features
-
-- **Responsive Design**: Optimized for all device sizes
-- **Modern UI**: Clean, professional design with smooth animations
-- **SEO Optimized**: Proper meta tags, Open Graph, and Twitter Card support
-- **Contact Form**: Integrated with Formspree for easy message handling
-- **Data-Driven**: JSON-based content management for easy updates
-- **GitHub Pages Ready**: Automated deployment via GitHub Actions
-- **Performance Optimized**: Minimal dependencies, fast loading
 
 ## 📁 Project Structure
 
@@ -34,10 +23,6 @@ abdirahim-portfolio/
 │   │   ├── experience.json # Work experience
 │   │   └── education.json  # Education details
 │   └── images/             # Assets (favicon, social media)
-├── .github/
-│   └── workflows/
-│       └── deploy.yml      # GitHub Pages deployment
-├── package.json            # Project configuration
 └── README.md              # This file
 ```
 
@@ -89,40 +74,12 @@ The contact form uses Formspree. To set up:
 2. Create a new form
 3. Replace the `action` URL in `index.html` with your Formspree URL
 
-## 🔧 Troubleshooting
 
 ### Common Issues
 
 **Form not working**
 - Check Formspree configuration
 - Verify form `action` URL in HTML
-
-**Styles not loading**
-- Ensure CSS imports are correct
-- Check file paths in HTML
-
-**JavaScript errors**
-- Verify JSON data files exist and are valid
-- Check browser console for errors
-
-**GitHub Pages not updating**
-- Wait a few minutes for deployment
-- Check GitHub Actions tab for errors
-- Verify repository settings
-
-### Performance Tips
-- Images are served as SVG for scalability
-- CSS is modular for better caching
-- Minimal JavaScript dependencies
-
-
-
-## 📞 Support
-
-For questions or issues:
-- Create an issue on GitHub
-- Contact via the website contact form
-- Connect on LinkedIn
 
 ---
 
