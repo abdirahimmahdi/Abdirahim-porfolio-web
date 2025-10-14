@@ -41,33 +41,6 @@ abdirahim-portfolio/
 └── README.md              # This file
 ```
 
-## 🛠️ Development
-
-### Prerequisites
-
-- Node.js (for local development tools)
-- Git
-- A modern web browser
-
-### Local Development
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/abdirahimmahdi/abdirahimmahdi.github.io.git
-   cd abdirahimmahdi.github.io
-   ```
-
-2. **Install dependencies** (optional, for build tools)
-   ```bash
-   npm install
-   ```
-
-3. **Start local server**
-   ```bash
-   npm run serve
-   ```
-   Then open http://localhost:8000 in your browser.
-
 ### Making Changes
 
 #### Content Updates (Easy)
@@ -101,25 +74,20 @@ Edit the CSS variables in `assets/css/base.css`:
 }
 ```
 
-### Adding New Sections
-1. Add HTML structure to `index.html`
-2. Add corresponding CSS styles to appropriate CSS files
-3. If data-driven, create JSON file and update `data-loader.js`
+### 📸 assets/images Directory
+Purpose: Stores visual assets for branding and social sharing
+
+- Professional Branding: Custom favicon (favicon.svg) makes your site look polished in browser tabs
+- Social Media Ready: og-image.svg creates attractive previews when your portfolio is shared on LinkedIn, Twitter, etc.
+- Mobile Optimization: apple-touch-icon.svg provides a custom icon when someone saves your site to their iOS home screen
+- SEO Benefits: Social media meta tags reference these images for better link previews
+
 
 ### Form Configuration
 The contact form uses Formspree. To set up:
 1. Go to [formspree.io](https://formspree.io)
 2. Create a new form
 3. Replace the `action` URL in `index.html` with your Formspree URL
-
-## 🚀 Deployment
-
-### GitHub Pages (Automatic)
-The site is automatically deployed to GitHub Pages when pushing to the `main` branch.
-
-### Manual Deployment
-1. **Build** (if needed): `npm run build`
-2. **Deploy**: Push to GitHub or use GitHub Pages settings
 
 ## 🔧 Troubleshooting
 
@@ -147,24 +115,7 @@ The site is automatically deployed to GitHub Pages when pushing to the `main` br
 - CSS is modular for better caching
 - Minimal JavaScript dependencies
 
-## 📱 Browser Support
 
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
-
-## 📄 License
-
-MIT License - feel free to use this template for your own portfolio.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
 
 ## 📞 Support
 
