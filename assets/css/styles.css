@@ -1,0 +1,86 @@
+:root{
+  --bg:#0b0f18; --card:#0f1524; --soft:#162039; --text:#e7ecf3; --muted:#9fb0d1; --brand:#6ee7ff; --brand-2:#7c7bff; --accent:#32d6a0;
+  --radius:20px; --shadow:0 8px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--text); background:var(--bg);
+  overflow-x:hidden; position:relative;
+}
+/* lightweight animated gradient background layer */
+.bg-anim{position:fixed; inset:0; z-index:-1; pointer-events:none; background:linear-gradient(120deg, rgba(124,123,255,.10), rgba(110,231,255,.10)); background-size:200% 200%; animation:bgShift 16s ease-in-out infinite}
+@keyframes bgShift{0%{background-position:0% 0%}50%{background-position:100% 100%}100%{background-position:0% 0%}}
+a{color:var(--brand)}
+header{
+  position:sticky; top:0; backdrop-filter:saturate(150%) blur(8px); background:linear-gradient(to bottom, rgba(11,15,24,.8), rgba(11,15,24,.35));
+  border-bottom:1px solid rgba(255,255,255,.06); z-index:1000;
+}
+.nav{max-width:1100px; margin:auto; display:flex; align-items:center; justify-content:space-between; padding:14px 18px}
+.nav .logo{display:flex; align-items:center; gap:10px; font-weight:800}
+.logo .avatar{width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg, var(--brand), var(--brand-2)); display:grid; place-items:center; color:#0b0f18; font-weight:900}
+.nav a{margin-left:18px; text-decoration:none; color:var(--muted)}
+.nav a:hover{color:var(--text)}
+.btn{display:inline-grid; place-items:center; padding:12px 18px; border-radius:14px; background:linear-gradient(135deg, var(--brand-2), var(--brand)); color:#00121d; font-weight:800; text-decoration:none; box-shadow:var(--shadow)}
+.btn.ghost{background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.12)}
+.btn:disabled{opacity:.6; cursor:not-allowed}
+
+.hero{max-width:1100px; margin:40px auto 0; padding:48px 18px 24px; display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center}
+.card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); box-shadow:var(--shadow)}
+.hero .left{padding:28px}
+.kicker{color:var(--accent); font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:.82rem}
+h1{font-size:clamp(28px, 6vw, 54px); line-height:1.05; margin:10px 0 12px}
+.typed{background:linear-gradient(135deg, var(--brand), var(--brand-2)); -webkit-background-clip:text; background-clip:text; color:transparent}
+.sub{color:var(--muted); font-size:1.05rem}
+.cta{display:flex; gap:12px; margin-top:18px; flex-wrap:wrap}
+
+.hero .right{padding:0; position:relative; overflow:hidden}
+.glass{position:relative; padding:26px; margin:18px; border-radius:18px; background:rgba(12,17,28,.6); border:1px solid rgba(255,255,255,.08)}
+.metrics{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:10px}
+.metric{padding:14px; border-radius:14px; background:rgba(255,255,255,.04); text-align:center}
+.metric .num{font-size:22px; font-weight:800}
+.metric .lbl{font-size:.78rem; color:var(--muted)}
+
+section{max-width:1100px; margin:0 auto; padding:36px 18px}
+.grid{display:grid; gap:18px}
+.skills{grid-template-columns:repeat(auto-fit, minmax(240px,1fr))}
+.skill{padding:18px; border-radius:16px; background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08)}
+.bar{height:8px; background:#0b1324; border-radius:10px; overflow:hidden; margin-top:8px; border:1px solid rgba(255,255,255,.08)}
+.bar>span{display:block; height:100%; width:0; background:linear-gradient(90deg, var(--brand), var(--brand-2)); transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+
+.timeline{position:relative}
+.timeline::before{content:""; position:absolute; left:20px; top:0; bottom:0; width:2px; background:linear-gradient(to bottom, var(--brand), transparent)}
+.item{position:relative; padding-left:56px; margin:18px 0}
+.dot{position:absolute; left:12px; top:6px; width:18px; height:18px; border-radius:50%; background:linear-gradient(135deg, var(--brand-2), var(--brand)); box-shadow:0 0 0 4px rgba(108, 99, 255, .15)}
+.item h3{margin:0 0 6px; font-size:1.05rem}
+.item .meta{color:var(--muted); font-size:.9rem; margin-bottom:8px}
+
+.list{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:12px}
+.pill{padding:10px 14px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:999px; width:max-content}
+
+.contact{display:grid; grid-template-columns:1.2fr .8fr; gap:18px}
+.form{padding:18px}
+input, textarea{width:100%; padding:12px 14px; margin:8px 0 14px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:#0b1324; color:var(--text)}
+textarea{min-height:120px}
+
+footer{padding:26px 18px 48px; text-align:center; color:var(--muted)}
+
+/* reveal animations */
+.reveal{opacity:0; transform:translateY(12px); transition: all .8s cubic-bezier(.22,1,.36,1)}
+.reveal.show{opacity:1; transform:none}
+.float{animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.shine{background:linear-gradient(120deg, rgba(255,255,255,.08), rgba(255,255,255,0), rgba(255,255,255,.08)); background-size:200% 100%; animation:shine 5s linear infinite}
+@keyframes shine{0%{background-position:200% 0}100%{background-position:-200% 0}}
+
+/* Resume Embed */
+.resume-embed{padding:0; overflow:hidden}
+.resume-embed object,.resume-embed iframe{width:100%; height:min(75vh, 900px); border:0; display:block}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr}
+  .resume-embed object,.resume-embed iframe{height:60vh}
+}
+
+
