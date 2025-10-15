@@ -68,13 +68,6 @@ Purpose: Stores visual assets for branding and social sharing
 - SEO Benefits: Social media meta tags reference these images for better link previews
 
 
-### Form Configuration
-The contact form uses Formspree. To set up:
-1. Go to [formspree.io](https://formspree.io)
-2. Create a new form
-3. Replace the `action` URL in `index.html` with your Formspree URL
-
-
 ### Common Issues
 
 **Form not working**
