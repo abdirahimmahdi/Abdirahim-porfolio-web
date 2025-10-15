@@ -1,0 +1,47 @@
+/* Import modular CSS files */
+@import url('base.css');
+@import url('components.css');
+@import url('layout.css');
+@import url('animations.css');
+
+/* Additional styles that don't fit in modules */
+.cert-grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.cert {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cert-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: .85rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.cert h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.cert p {
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .cert-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+

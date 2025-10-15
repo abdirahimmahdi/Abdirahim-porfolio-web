@@ -1,0 +1,71 @@
+/* Animated Background */
+.bg-anim {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(124, 123, 255, .10), rgba(110, 231, 255, .10));
+  background-size: 200% 200%;
+  animation: bgShift 16s ease-in-out infinite;
+}
+
+@keyframes bgShift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all .8s cubic-bezier(.22, 1, .36, 1);
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* Floating Animation */
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Shine Effect */
+.shine {
+  background: linear-gradient(120deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, 0), rgba(255, 255, 255, .08));
+  background-size: 200% 100%;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Resume Embed */
+.resume-embed {
+  padding: 0;
+  overflow: hidden;
+}
+
+.resume-embed object,
+.resume-embed iframe {
+  width: 100%;
+  height: min(80vh, 1000px);
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .resume-embed object,
+  .resume-embed iframe {
+    height: 60vh;
+  }
+}

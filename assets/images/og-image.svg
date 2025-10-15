@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background -->
+  <rect width="1200" height="630" rx="20" fill="#0b0f18"/>
+
+  <!-- Gradient overlay -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6ee7ff;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#7c7bff;stop-opacity:0.1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="20" fill="url(#bgGradient)"/>
+
+  <!-- Main content -->
+  <text x="100" y="200" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#e7ecf3">
+    ABDIRAHIM MAHDI
+  </text>
+
+  <text x="100" y="280" font-family="Arial, sans-serif" font-size="48" fill="#6ee7ff">
+    Industrial Engineering Student
+  </text>
+
+  <text x="100" y="350" font-family="Arial, sans-serif" font-size="32" fill="#9fb0d1">
+    Process Optimization • Data Analysis • Operations
+  </text>
+
+  <!-- Decorative elements -->
+  <circle cx="900" cy="150" r="80" fill="none" stroke="#6ee7ff" stroke-width="3" opacity="0.3"/>
+  <circle cx="1000" cy="250" r="60" fill="none" stroke="#7c7bff" stroke-width="2" opacity="0.4"/>
+  <circle cx="850" cy="350" r="40" fill="#6ee7ff" opacity="0.2"/>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="500" width="1200" height="130" rx="20" fill="url(#bgGradient)" opacity="0.5"/>
+  <text x="100" y="570" font-family="Arial, sans-serif" font-size="24" fill="#e7ecf3">
+    Portfolio • abdirahimmahdi.github.io
+  </text>
+</svg>

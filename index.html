@@ -4,295 +4,118 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Abdirahim Omar Mahdi — Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0b0f18; --card:#0f1524; --soft:#162039; --text:#e7ecf3; --muted:#9fb0d1; --brand:#6ee7ff; --brand-2:#7c7bff; --accent:#32d6a0;
-      --radius:20px; --shadow:0 8px 30px rgba(0,0,0,.35);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--text); background:radial-gradient(1200px 800px at 80% -10%, rgba(108,99,255,.15), transparent 70%),
-      radial-gradient(800px 600px at -10% 20%, rgba(0,212,255,.10), transparent 60%), var(--bg);
-      overflow-x:hidden;
-    }
-    a{color:var(--brand)}
-    header{
-      position:sticky; top:0; backdrop-filter:saturate(150%) blur(8px); background:linear-gradient(to bottom, rgba(11,15,24,.8), rgba(11,15,24,.35));
-      border-bottom:1px solid rgba(255,255,255,.06); z-index:1000;
-    }
-    .nav{max-width:1100px; margin:auto; display:flex; align-items:center; justify-content:space-between; padding:14px 18px}
-    .nav .logo{display:flex; align-items:center; gap:10px; font-weight:800}
-    .logo .avatar{width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg, var(--brand), var(--brand-2)); display:grid; place-items:center; color:#0b0f18; font-weight:900}
-    .nav a{margin-left:18px; text-decoration:none; color:var(--muted)}
-    .nav a:hover{color:var(--text)}
-    .btn{display:inline-grid; place-items:center; padding:12px 18px; border-radius:14px; background:linear-gradient(135deg, var(--brand-2), var(--brand)); color:#00121d; font-weight:800; text-decoration:none; box-shadow:var(--shadow)}
-    .btn.ghost{background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.12)}
+  <meta name="description" content="Industrial Engineering student passionate about process optimization, data-driven decisions, and building clean dashboards. Seeking internships and entry-level roles in operations, analytics, or supply chain.">
+  <meta name="keywords" content="industrial engineering, process optimization, data analysis, operations, supply chain, internship, portfolio">
+  <meta name="author" content="Abdirahim Omar Mahdi">
 
-    .hero{max-width:1100px; margin:40px auto 0; padding:48px 18px 24px; display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); box-shadow:var(--shadow)}
-    .hero .left{padding:28px}
-    .kicker{color:var(--accent); font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:.82rem}
-    h1{font-size:clamp(28px, 6vw, 54px); line-height:1.05; margin:10px 0 12px}
-    .typed{background:linear-gradient(135deg, var(--brand), var(--brand-2)); -webkit-background-clip:text; background-clip:text; color:transparent}
-    .sub{color:var(--muted); font-size:1.05rem}
-    .cta{display:flex; gap:12px; margin-top:18px; flex-wrap:wrap}
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://abdirahimmahdi.github.io/">
+  <meta property="og:title" content="Abdirahim Omar Mahdi — Portfolio">
+  <meta property="og:description" content="Industrial Engineering student passionate about process optimization, data-driven decisions, and building clean dashboards.">
+  <meta property="og:image" content="https://abdirahimmahdi.github.io/assets/images/lgo.svg">
 
-    .hero .right{padding:0; position:relative; overflow:hidden}
-    .orb{position:absolute; filter:blur(28px); opacity:.6; border-radius:50%}
-    .orb.one{width:260px; height:260px; background:radial-gradient(circle at 30% 30%, var(--brand), transparent 60%); right:-40px; top:-40px}
-    .orb.two{width:300px; height:300px; background:radial-gradient(circle at 70% 70%, var(--brand-2), transparent 60%); left:-50px; bottom:-60px}
-    .glass{position:relative; padding:26px; margin:18px; border-radius:18px; background:rgba(12,17,28,.6); border:1px solid rgba(255,255,255,.08)}
-    .metrics{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:10px}
-    .metric{padding:14px; border-radius:14px; background:rgba(255,255,255,.04); text-align:center}
-    .metric .num{font-size:22px; font-weight:800}
-    .metric .lbl{font-size:.78rem; color:var(--muted)}
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://abdirahimmahdi.github.io/">
+  <meta property="twitter:title" content="Abdirahim Omar Mahdi — Portfolio">
+  <meta property="twitter:description" content="Industrial Engineering student passionate about process optimization, data-driven decisions, and building clean dashboards.">
+  <meta property="twitter:image" content="https://abdirahimmahdi.github.io/assets/images/lgo.svg">
 
-    section{max-width:1100px; margin:0 auto; padding:36px 18px}
-    .grid{display:grid; gap:18px}
-    .skills{grid-template-columns:repeat(auto-fit, minmax(240px,1fr))}
-    .skill{padding:18px; border-radius:16px; background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08)}
-    .bar{height:8px; background:#0b1324; border-radius:10px; overflow:hidden; margin-top:8px; border:1px solid rgba(255,255,255,.08)}
-    .bar>span{display:block; height:100%; width:0; background:linear-gradient(90deg, var(--brand), var(--brand-2)); transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/icon.svg">
+  <link rel="apple-touch-icon" href="assets/images/icon.svg">
 
-    .timeline{position:relative}
-    .timeline::before{content:""; position:absolute; left:20px; top:0; bottom:0; width:2px; background:linear-gradient(to bottom, var(--brand), transparent)}
-    .item{position:relative; padding-left:56px; margin:18px 0}
-    .dot{position:absolute; left:12px; top:6px; width:18px; height:18px; border-radius:50%; background:linear-gradient(135deg, var(--brand-2), var(--brand)); box-shadow:0 0 0 4px rgba(108, 99, 255, .15)}
-    .item h3{margin:0 0 6px; font-size:1.05rem}
-    .item .meta{color:var(--muted); font-size:.9rem; margin-bottom:8px}
-
-    .list{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:12px}
-    .pill{padding:10px 14px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:999px; width:max-content}
-
-    .contact{display:grid; grid-template-columns:1.2fr .8fr; gap:18px}
-    .form{padding:18px}
-    input, textarea{width:100%; padding:12px 14px; margin:8px 0 14px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:#0b1324; color:var(--text)}
-    textarea{min-height:120px}
-
-    footer{padding:26px 18px 48px; text-align:center; color:var(--muted)}
-
-    /* reveal animations */
-    .reveal{opacity:0; transform:translateY(12px); transition: all .8s cubic-bezier(.22,1,.36,1)}
-    .reveal.show{opacity:1; transform:none}
-    .float{animation:float 6s ease-in-out infinite}
-    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-    .shine{background:linear-gradient(120deg, rgba(255,255,255,.08), rgba(255,255,255,0), rgba(255,255,255,.08)); background-size:200% 100%; animation:shine 5s linear infinite}
-    @keyframes shine{0%{background-position:200% 0}100%{background-position:-200% 0}}
-
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .contact{grid-template-columns:1fr}
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body id="top">
+  <div class="bg-anim"></div>
   <header>
     <nav class="nav">
-      <div class="logo"><div class="avatar">AM</div> Abdirahim Mahdi</div>
-      <div>
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-name">ABDIRAHIM<br class="brand-break"/> MAHDI</span>
+        <span class="brand-tagline">Industrial Engineering Student</span>
+      </a>
+      <div class="nav-links" role="navigation" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
+        <a href="resume.html">Resume</a>
         <a href="#contact">Contact</a>
-        
       </div>
     </nav>
   </header>
 
   <section class="hero">
     <div class="left card reveal">
-      <div class="kicker">Industrial Engineering Student</div>
       <h1>Hi, I’m Abdirahim — <span class="typed" id="typed"></span></h1>
       <p class="sub">I’m passionate about process optimization, data‑driven decisions, and building clean dashboards that improve productivity and inventory control. Seeking <b>internships</b> and <b>entry-level roles</b> in operations, analytics, or supply chain.</p>
       <div class="cta">
-        <a class="btn" href="mailto:abdirahimdayib@gmail.com">Contact Me</a>
+        <a class="btn" href="#contact">Contact Me</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/abdirahimmahdi/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-    <div class="right card reveal">
-      <div class="orb one float"></div>
-      <div class="orb two float" style="animation-delay:1.2s"></div>
-      <div class="glass">
-        <h3 style="margin:0 0 8px">Quick Snapshot</h3>
-        <div class="metrics">
-          <div class="metric"><div class="num" data-count="2026">0000</div><div class="lbl">Grad Year</div></div>
-          <div class="metric"><div class="num" data-count="8">0</div><div class="lbl">Certs/Modules</div></div>
-        </div>
-      </div>
-      <div class="glass shine" style="margin-top:10px">
-        <div style="display:flex; gap:10px; flex-wrap:wrap">
-          <span class="pill">Excel (Advanced)</span>
-          <span class="pill">Power BI (Basic)</span>
-          <span class="pill">Lean Manufacturing</span>
-          <span class="pill">Time & Motion Studies</span>
-          <span class="pill">Inventory Mgmt</span>
-          <span class="pill">Stochastic Models</span>
-          <span class="pill">Simulation</span>
-        </div>
       </div>
     </div>
   </section>
 
+
   <section id="about" class="reveal">
+    <div class="about-kicker" id="about-kicker">Industrial Engineering Student</div>
     <h2>About</h2>
-    <div class="card" style="padding:18px">
-      Motivated Industrial Engineering student with a passion for <b>process optimization</b>, <b>productivity improvement</b>, and <b>data‑driven decision‑making</b>. Hands‑on with dashboarding for production efficiency and inventory management. Based in <b>Avcılar, Istanbul</b>.
+    <div class="card" style="padding:18px" id="about-content">
+      <!-- Content will be loaded from personal.json -->
     </div>
   </section>
 
   <section id="skills" class="reveal">
-    <h2>Technical Skills</h2>
-    <div class="grid skills">
-      <div class="skill"><b>Data Analysis & Visualization</b><div class="bar"><span data-val="90"></span></div><div class="muted">Excel (Advanced), Power BI (Basic)</div></div>
-      <div class="skill"><b>Operations & Optimization</b><div class="bar"><span data-val="80"></span></div><div class="muted">Lean, Time & Motion, Inventory</div></div>
-      <div class="skill"><b>Math & Statistics</b><div class="bar"><span data-val="75"></span></div><div class="muted">Probability, Stochastic Models, Simulation</div></div>
-      <div class="skill"><b>Programming</b><div class="bar"><span data-val="55"></span></div><div class="muted">Intro level for scripting & analysis</div></div>
+    <h2>Skills</h2>
+    <div class="grid skills" id="skills-container">
+      <!-- Skills will be loaded from skills.json -->
     </div>
   </section>
 
   <section id="experience" class="reveal">
     <h2>Experience</h2>
-    <div class="timeline">
-      <div class="item card">
-        <div class="dot"></div>
-        <div style="padding:16px">
-          <h3>Business Development & Marketing Intern — Bluesense AI Inc.</h3>
-          <div class="meta">Istanbul, Türkiye • Jun 2025 – Aug 2025</div>
-          <ul>
-            <li>Supported B2B outreach, identifying partners and building strategic connections.</li>
-            <li>Helped prepare the company’s data room for investor relations and due diligence.</li>
-            <li>Contributed to product development, marketing strategy, and business planning.</li>
-            <li>Gained practical experience in business development and investor readiness.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="item card">
-        <div class="dot"></div>
-        <div style="padding:16px">
-          <h3>Logistics & Client Services Intern — Somali Transport</h3>
-          <div class="meta">Istanbul, Türkiye • Aug 2025 – Sep 2025</div>
-          <ul>
-            <li>Managed shipping documents (Bills of Lading, Commercial Invoices) and tracking software.</li>
-            <li>Troubleshot shipment delays and supported multimodal route planning.</li>
-            <li>Strengthened problem‑solving and client service capabilities.</li>
-          </ul>
-        </div>
-      </div>
-      <div class="item card">
-        <div class="dot"></div>
-        <div style="padding:16px">
-          <h3>Excel Data Analysis Project — DataCamp</h3>
-          <div class="meta">2024</div>
-          <ul>
-            <li>Analyzed customer churn data using preparation, visualization, and analysis techniques in Excel.</li>
-            <li>Produced insights and recommendations to improve decision‑making.</li>
-          </ul>
-        </div>
-      </div>
+    <div class="timeline" id="experience-container">
+      <!-- Experience will be loaded from experience.json -->
     </div>
   </section>
 
   <section id="education" class="reveal">
     <h2>Education</h2>
-    <div class="card" style="padding:18px">
-      <b>Altınbaş University</b> — BSc Industrial Engineering (Expected Jun 2026) • GPA 3.45<br/>
-      <div class="list" style="margin-top:10px">
-        <span class="pill">Production Systems Mgmt</span>
-        <span class="pill">Stochastic Models</span>
-        <span class="pill">System Simulation</span>
-        <span class="pill">Supply Chain</span>
-        <span class="pill">Engineering Economics</span>
-      </div>
+    <div class="card" style="padding:18px" id="education-container">
+      <!-- Education will be loaded from education.json -->
     </div>
   </section>
 
-  <section class="reveal">
-    <h2>Certifications & Training</h2>
-    <div class="grid skills">
-      <div class="skill"><b>Data Analytics & Excel</b><div class="bar"><span data-val="85"></span></div><div class="muted">DataCamp, IBM, Coursera</div></div>
-      <div class="skill"><b>Operations & Supply Chain</b><div class="bar"><span data-val="70"></span></div><div class="muted">Rutgers SCM Specialization (Mar 2025)</div></div>
-      <div class="skill"><b>Lean Six Sigma & Quality</b><div class="bar"><span data-val="65"></span></div><div class="muted">U. Amsterdam, Board Infinity (Mar 2025)</div></div>
-    </div>
-  </section>
-
-  <section class="reveal">
-    <h2>Languages & Personal Skills</h2>
-    <div class="grid skills">
-      <div class="skill"><b>Languages</b><div class="bar"><span data-val="80"></span></div><div class="muted">English (Upper‑Intermediate), Turkish (Good communication)</div></div>
-      <div class="skill"><b>Personal</b><div class="bar"><span data-val="85"></span></div><div class="muted">Problem Solving, Teamwork, Time Management</div></div>
-    </div>
-  </section>
+  
 
 
   <section id="contact" class="contact reveal">
     <div class="card" style="padding:18px">
       <h2>Contact Me</h2>
       <p class="muted">Feel free to reach out for internships, junior roles, or collaborations.</p>
-      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px">
-        <a class="btn" href="mailto:abdirahimdayib@gmail.com">Email Me</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/abdirahimmahdi/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn ghost" href="tel:+905312700429">Call</a>
-      </div>
-      <div style="margin-top:12px; color:var(--muted)">Avcılar, Istanbul, Türkiye</div>
+      <form id="contactForm" class="form" action="https://formspree.io/f/xeqypvdk" method="POST" novalidate>
+        <input type="text" name="name" id="name" placeholder="Your name" autocomplete="name" required aria-label="Your name">
+        <input type="email" name="email" id="email" placeholder="Your email" autocomplete="email" required aria-label="Your email">
+        <textarea name="message" id="message" placeholder="Your message" required aria-label="Your message"></textarea>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center">
+          <button type="submit" class="btn" id="sendBtn">Send Message</button>
+          <a class="btn ghost" href="https://www.linkedin.com/in/abdirahimmahdi/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="tel:+905312700429">Call</a>
+          <span id="formStatus" class="muted" role="status" aria-live="polite" style="min-height:20px"></span>
+        </div>
+      </form>
+      <div style="margin-top:12px; color:var(--muted)" id="contact-location"><!-- Location will be loaded from personal.json --></div>
     </div>
   </section>
 
   <footer>
-    © <span id="year"></span> Abdirahim Mahdi · Built by Shams with ❤
+    © <span id="year"></span> Abdirahim Mahdi
   </footer>
 
-  <script>
-    // year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // typed effect
-    const words = [
-      'Data Analysis Enthusiast',
-      'Process Optimizer',
-      'Operations & Supply Chain Learner'
-    ];
-    let wi=0, ci=0; const el = document.getElementById('typed');
-    function type(){
-      if(ci<=words[wi].length){ el.textContent = words[wi].slice(0,ci++); setTimeout(type, 70); }
-      else setTimeout(erase, 1200);
-    }
-    function erase(){
-      if(ci>=0){ el.textContent = words[wi].slice(0,ci--); setTimeout(erase, 40); }
-      else { wi=(wi+1)%words.length; setTimeout(type, 300);} }
-    type();
-
-    // reveal on scroll
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);
-        // animate bars inside this section
-        e.target.querySelectorAll('.bar>span').forEach(b=>{
-          const v = b.getAttribute('data-val')||0; requestAnimationFrame(()=>{ b.style.width = v+'%'; });
-        });
-      }});
-    }, {threshold:.12});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-    // metric counters
-    function countUp(el){
-      const target = parseFloat(el.dataset.count); const isInt = Number.isInteger(target); let cur=0; const steps=60; const inc = target/steps; let i=0;
-      const tick=()=>{ i++; cur+=inc; if(i>=steps){ el.textContent = isInt? Math.round(target): target.toFixed(2);}
-        else { el.textContent = isInt? Math.round(cur) : cur.toFixed(2); requestAnimationFrame(tick);} };
-      tick();
-    }
-    document.querySelectorAll('.num').forEach(n=>countUp(n));
-
-    // download CV (placeholder: generates a simple text file; replace with real PDF link)
-    document.getElementById('downloadCV').addEventListener('click', (e)=>{
-      if(!location.href.includes('.pdf')){
-        e.preventDefault();
-        const blob = new Blob([`Abdirahim Omar Mahdi\nIndustrial Engineering Student\nEmail: abdirahimdayib@gmail.com\nLinkedIn: linkedin.com/in/abdirahimmahdi`], {type:'text/plain'});
-        const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href=url; a.download='Abdirahim_Mahdi_CV.txt'; a.click(); URL.revokeObjectURL(url);
-      }
-    });
-  </script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
 

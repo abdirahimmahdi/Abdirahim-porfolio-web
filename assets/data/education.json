@@ -1,0 +1,16 @@
+{
+  "education": [
+    {
+      "institution": "Altınbaş University",
+      "degree": "BSc Industrial Engineering",
+      "period": "2022-2026",
+      "courses": [
+        "Production Systems Mgmt",
+        "Stochastic Models",
+        "System Simulation",
+        "Supply Chain",
+        "Engineering Economics"
+      ]
+    }
+  ]
+}
